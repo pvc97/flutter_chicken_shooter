@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_catcher_oz/pages/high_score_page.dart';
 
-import '../dodo_in_app/upgrade_page.dart';
 import 'game_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -70,22 +69,6 @@ class HomePage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.4,
                     child: Image.asset(
                       "assets/images/highscore_yellow.png",
-                    ),
-                  ),
-                ),
-                SizedBox(height: 20),
-                GestureDetector(
-                  onTap: () async {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => UpgradePage(),
-                      ),
-                    );
-                  },
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: Image.asset(
-                      "assets/images/upgrade_yellow.png",
                     ),
                   ),
                 ),

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flame/collisions.dart';
@@ -10,7 +11,7 @@ class Ball extends SpriteComponent with HasGameRef<ChickenShooteGame> {
   Vector2 velocity = Vector2(0, 180);
 
   @override
-  Future<void>? onLoad() {
+  FutureOr<void>? onLoad() {
     add(RectangleHitbox());
     return super.onLoad();
   }

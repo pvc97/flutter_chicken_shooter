@@ -19,7 +19,7 @@ class _HightScorePageState extends State<HightScorePage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((_) async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       top1 = await SPref.instance.getInt("top1") ?? 0;
 
       top2 = await SPref.instance.getInt("top2") ?? 0;

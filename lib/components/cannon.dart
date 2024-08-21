@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flame/components.dart';
@@ -11,7 +12,7 @@ class Cannon extends SpriteComponent with HasGameRef<ChickenShooteGame> {
   bool allowFire = false;
 
   @override
-  Future<void>? onLoad() {
+  FutureOr<void>? onLoad() {
     oldAngle = angle;
     newAngle = angle;
 

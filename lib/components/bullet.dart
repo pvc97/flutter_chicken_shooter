@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flame/collisions.dart';
@@ -17,7 +18,7 @@ class Bullet extends SpriteComponent
   bool visible = true;
 
   @override
-  Future<void>? onLoad() {
+  FutureOr<void>? onLoad() {
     add(RectangleHitbox());
     return super.onLoad();
   }
