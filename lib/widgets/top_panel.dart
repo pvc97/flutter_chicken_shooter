@@ -27,12 +27,12 @@ class _TopPanelWidgetState extends State<TopPanelWidget> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       int? seconds = await SPref.instance.getInt("seconds");
 
       if (seconds == null) {
         SPref.instance.setInt("seconds", 15);
-        seconds = 15;
+        seconds = 50;
       }
 
       timeRemaining = seconds * 1000;

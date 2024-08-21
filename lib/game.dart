@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:flame/experimental.dart';
+import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/sprite.dart';
 import 'package:fruit_catcher_oz/components/bullet.dart';
@@ -13,7 +13,7 @@ import 'widgets/game_over.dart';
 import 'widgets/top_panel.dart';
 
 class ChickenShooteGame extends FlameGame
-    with HasTappableComponents, HasCollisionDetection {
+    with TapCallbacks, HasCollisionDetection {
   late final Cannon cannon;
 
   final List<Ball> balls = [];
